@@ -32,7 +32,7 @@ Create a `.env` file in `model/`:
 API_KEY=your_groq_api_key
 ```
 
-Place your source PDF as `model/dset1.pdf`, then:
+Place your source PDFs in `datasets/`, then:
 
 ```bash
 cd model
