@@ -2,3 +2,5 @@ venv/
 api_key.py
 __pycache__/
 .env
+model/indexes/
+model/uploads/

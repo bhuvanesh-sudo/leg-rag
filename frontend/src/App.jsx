@@ -584,7 +584,7 @@ export default function App() {
               color: C.ivory,
               letterSpacing: "-0.01em",
             }}>
-              LegalLens
+              LegalRAG
             </span>
             <span style={{
               fontFamily: FONT_MONO,
