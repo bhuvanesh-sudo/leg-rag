@@ -32,7 +32,7 @@ Create a `.env` file in `model/`:
 API_KEY=your_groq_api_key
 ```
 
-Place your source PDFs in `datasets/`, then:
+Place your source PDFs in `model/dataset/`, then:
 
 ```bash
 cd model
@@ -53,7 +53,7 @@ model/
 ├── retriever.py    FAISS retriever config
 ├── vectorstore.py  Embedding + index construction
 ├── ingestion.py    PDF loading and text splitting
-└── datasets/       (To be added)
+└── dataset/        Organised collection of PDFs
 ```
 
 ---
