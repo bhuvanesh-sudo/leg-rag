@@ -53,7 +53,7 @@ model/
 ├── retriever.py    FAISS retriever config
 ├── vectorstore.py  Embedding + index construction
 ├── ingestion.py    PDF loading and text splitting
-└── dset1.pdf       Source document (not tracked)
+└── datasets/       (To be added)
 ```
 
 ---
