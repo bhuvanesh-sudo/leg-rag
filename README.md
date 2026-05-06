@@ -1,7 +1,3 @@
-This version merges the new full-stack architecture and the **LegalLens** identity back into the clean, professional aesthetic of your original `legal-rag` README.
-
----
-
 # LegalLens
 
 A full-stack, modular retrieval-augmented generation system for "Contract Intelligence." It transforms complex legal PDFs into plain-English insights using clause-aware chunking, FAISS persistence, and Groq-hosted Llama 3.3.
