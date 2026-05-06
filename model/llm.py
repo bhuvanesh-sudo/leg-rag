@@ -11,7 +11,7 @@ import requests
 
 class GroqLLM(BaseChatModel):
     api_key: str
-    model: str = "llama-3.3-70b-versatile"
+    model: str = "llama-3.3-70b-instant"
     temperature: float = 0.1
 
     @property
