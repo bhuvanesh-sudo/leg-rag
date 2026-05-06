@@ -33,7 +33,7 @@ from chunker import chunk_blocks
 UPLOAD_DIR = Path(os.getenv("UPLOAD_DIR", "./uploads"))
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
-app = FastAPI(title="LegalLens API", version="1.0")
+app = FastAPI(title="Legal RAG API", version="1.0")
 
 app.add_middleware(
     CORSMiddleware,

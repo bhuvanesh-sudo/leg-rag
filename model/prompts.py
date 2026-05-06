@@ -44,7 +44,7 @@ Review the clauses below and identify any that are potentially risky, unusual, o
 1. Name the clause type (e.g. "Non-Compete", "Arbitration", "Auto-Renewal")
 2. Quote or reference the relevant text with its citation (§ and page)
 3. Explain in plain English why it matters and what the consequences could be
-4. Rate severity: 🔴 HIGH / 🟡 MEDIUM / 🟢 LOW
+4. Rate severity:  HIGH / MEDIUM / LOW
 
 If there are no significant risks in this section, say so clearly.
 
@@ -63,7 +63,7 @@ WORRY_TEMPLATE = PromptTemplate(
 From the clauses below, generate a prioritized list of the most important concerns and potential negotiation points. Be direct, concise, and plain-spoken. Lead with the most serious items.
 
 Format each item as:
-- [Risk level 🔴/🟡/🟢] **Clause name** (§ref, p.N): One-sentence plain explanation of why it matters.
+- [Risk level H/M/L] **Clause name** (§ref, p.N): One-sentence plain explanation of why it matters.
 
 DOCUMENT CLAUSES:
 {context}

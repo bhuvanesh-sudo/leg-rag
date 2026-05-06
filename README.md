@@ -1,4 +1,4 @@
-# LegalLens
+# Legal RAG
 
 A full-stack, modular retrieval-augmented generation system for "Contract Intelligence." It transforms complex legal PDFs into plain-English insights using clause-aware chunking, FAISS persistence, and Groq-hosted Llama 3.3.
 
@@ -35,7 +35,7 @@ uvicorn api:app --reload --port 8000
 
 ### 2. Frontend (React)
 ```bash
-cd legallens
+cd frontend
 npm install
 npm run dev
 ```
@@ -103,6 +103,6 @@ npm run dev
 
 ## Known Limitations
 
-- **Educational Use Only:** LegalLens is a tool for reading assistance; it is not a substitute for professional legal advice.
+- **Educational Use Only:** Legal RAG is a tool for reading assistance; it is not a substitute for professional legal advice.
 - **OCR:** Currently relies on digital text layers; scanned (image-only) PDFs require a pre-processing OCR step.
 - **Context Window:** Extremely large contracts (100+ pages) may require `map_reduce` strategies for the "Worry List" generation.

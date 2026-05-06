@@ -1,4 +1,4 @@
-# LegalLens — Setup & Run
+# Legal RAG — Setup & Run
 
 ## Prerequisites
 - Python 3.10+
@@ -29,8 +29,8 @@ Interactive docs at http://localhost:8000/docs
 
 ```bash
 # In your React project (Vite recommended)
-npm create vite@latest legallens -- --template react
-cd legallens
+npm create vite@latest frontend -- --template react
+cd frontend
 npm install
 
 # Replace src/App.jsx with the provided App.jsx
