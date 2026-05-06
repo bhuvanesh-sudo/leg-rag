@@ -21,7 +21,7 @@ class RiskFlag:
     explanation: str
 
 
-# ── Pattern registry ─────────────────────────────────────────────────────────
+# ── Pattern registry ─
 # Each entry: (clause_type, severity, regex_patterns, short_explanation)
 RISK_PATTERNS: list[tuple[str, str, list[re.Pattern], str]] = [
     (

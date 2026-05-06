@@ -49,7 +49,7 @@ def _confidence_note(docs: list[Document]) -> str:
     return ""
 
 
-# ── Q&A ──────────────────────────────────────────────────────────────────────
+# ── Q&A ──────────────
 def answer_question(question: str, doc_id: str, session_id: str | None = None) -> dict:
     docs = ret.retrieve(question, doc_id)
     if not docs:
@@ -111,7 +111,7 @@ def chat(question: str, doc_id: str, session_id: str) -> dict:
     }
 
 
-# ── Risk Analysis ─────────────────────────────────────────────────────────────
+# ── Risk Analysis ─────
 def analyze_risks(doc_id: str, all_chunks: list[Document]) -> dict:
     # Phase 1: fast regex scan
     flags = risk_mod.scan_chunks(all_chunks)
@@ -136,7 +136,7 @@ def analyze_risks(doc_id: str, all_chunks: list[Document]) -> dict:
     }
 
 
-# ── Worry List ────────────────────────────────────────────────────────────────
+# ── Worry List ────────
 def worry_list(doc_id: str, all_chunks: list[Document]) -> dict:
     # Sample broadly across the document for the worry summary
     sample = all_chunks[:20]  # first 20 chunks cover intro + key clauses
@@ -146,7 +146,7 @@ def worry_list(doc_id: str, all_chunks: list[Document]) -> dict:
     return {"summary": result + DISCLAIMER}
 
 
-# ── Contract Comparison ───────────────────────────────────────────────────────
+# ── Contract Comparison ────
 def compare_docs(
     doc_id_a: str,
     doc_id_b: str,

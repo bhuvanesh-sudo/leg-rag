@@ -46,7 +46,7 @@ app.add_middleware(
 _doc_registry: dict[str, dict] = {}
 
 
-# ── Ingest ────────────────────────────────────────────────────────────────────
+# ── Ingest ────────────
 @app.post("/ingest")
 async def ingest(file: UploadFile = File(...)):
     if not file.filename.endswith(".pdf"):
@@ -80,7 +80,7 @@ async def ingest(file: UploadFile = File(...)):
     }
 
 
-# ── Q&A ───────────────────────────────────────────────────────────────────────
+# ── Q&A ───────────
 class AskRequest(BaseModel):
     doc_id: str
     question: str
@@ -94,7 +94,7 @@ async def ask(req: AskRequest):
     return result
 
 
-# ── Chat (with memory) ────────────────────────────────────────────────────────
+# ── Chat (with memory) 
 class ChatRequest(BaseModel):
     doc_id: str
     question: str
@@ -108,7 +108,7 @@ async def chat(req: ChatRequest):
     return result
 
 
-# ── Risk Analysis ─────────────────────────────────────────────────────────────
+# ── Risk Analysis ─────
 class DocRequest(BaseModel):
     doc_id: str
 
@@ -121,7 +121,7 @@ async def risks(req: DocRequest):
     return result
 
 
-# ── Worry List ────────────────────────────────────────────────────────────────
+# ── Worry List ────────
 @app.post("/worry")
 async def worry(req: DocRequest):
     _require_doc(req.doc_id)
@@ -130,7 +130,7 @@ async def worry(req: DocRequest):
     return result
 
 
-# ── Comparison ────────────────────────────────────────────────────────────────
+# ── Comparison ────────
 class CompareRequest(BaseModel):
     doc_id_a: str
     doc_id_b: str
@@ -145,13 +145,13 @@ async def compare(req: CompareRequest):
     return result
 
 
-# ── Docs list ─────────────────────────────────────────────────────────────────
+# ── Docs list ─────────
 @app.get("/docs-list")
 async def docs_list():
     return {"documents": list(_doc_registry.values())}
 
 
-# ── Session reset ─────────────────────────────────────────────────────────────
+# ── Session reset ─────
 @app.delete("/session/{session_id}")
 async def clear_session(session_id: str):
     import memory as mem
@@ -159,7 +159,7 @@ async def clear_session(session_id: str):
     return {"cleared": session_id}
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+# ── Helpers ───────────
 def _require_doc(doc_id: str):
     if doc_id not in _doc_registry:
         # Try loading from disk (persisted index)

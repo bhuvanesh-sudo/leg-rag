@@ -13,7 +13,7 @@ DISCLAIMER = (
     "Consult a qualified attorney before making decisions based on this document."
 )
 
-# ── Plain-English Q&A ────────────────────────────────────────────────────────
+# ── Plain-English Q&A 
 QA_TEMPLATE = PromptTemplate(
     input_variables=["context", "question"],
     template="""You are a legal translator helping an ordinary person understand a contract or legal document. Your job is to explain what the document actually means in plain, simple English — no jargon.
@@ -35,7 +35,7 @@ ANSWER (plain English, with citations):""",
 )
 
 
-# ── Risk Analysis ────────────────────────────────────────────────────────────
+# ── Risk Analysis ────
 RISK_TEMPLATE = PromptTemplate(
     input_variables=["context"],
     template="""You are a contract risk analyst reviewing a legal document on behalf of an ordinary person who is not a lawyer.
