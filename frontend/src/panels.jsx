@@ -1,6 +1,6 @@
 // panels.js — ChatPanel, RiskPanel, WorryPanel, ComparePanel
 import { useState, useRef, useEffect, useCallback } from "react";
-import { FONT } from "./theme";
+import { FONT } from "./theme.jsx";
 import { Spinner, Bubble, PanelHeader, EmptyState } from "./components";
 import { RiskCard, SuggestionChips, SeveritySummary } from "./cards";
 import { SmallUpload } from "./upload";

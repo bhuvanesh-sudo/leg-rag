@@ -1,6 +1,6 @@
 // components.jsx — Atomic UI primitives
 import { useState } from "react";
-import { FONT } from "./theme";
+import { FONT } from "./theme.jsx";
 
 export function Spinner({ color = "#8B0000", size = 5 }) {
   return (

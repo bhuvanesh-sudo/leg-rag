@@ -1,6 +1,6 @@
 // App.jsx — Root layout, state management, header, sidebar
 import { useState, useCallback, Component } from "react";
-import { getTheme, GLOBAL_CSS, FONT } from "./theme";
+import { getTheme, GLOBAL_CSS, FONT } from "./theme.jsx";
 import { Spinner } from "./components";
 import { ModeItem } from "./cards";
 import { UploadZone, SmallUpload } from "./upload";

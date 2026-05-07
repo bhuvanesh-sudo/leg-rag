@@ -1,6 +1,6 @@
 // cards.js — Composite card components
 import { useState } from "react";
-import { FONT, severityColor, severityBg, severityLabel } from "./theme.js";
+import { FONT, severityColor, severityBg, severityLabel } from "./theme.jsx";
 import { Tag } from "./components.jsx";
 
 export function RiskCard({ flag, T, delay = 0 }) {

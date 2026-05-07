@@ -1,6 +1,6 @@
 // upload.js — Upload zone + small sidebar uploader
 import { useState, useRef, useCallback } from "react";
-import { FONT } from "./theme.js";
+import { FONT } from "./theme";
 import { Spinner } from "./components.jsx";
 
 const API = "http://localhost:8000";

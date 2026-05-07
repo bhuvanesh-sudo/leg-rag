@@ -1,4 +1,4 @@
-// theme.js — Design tokens for LegalLens
+// theme.js — Design tokens for LegalRAG
 // American Psycho palette: ivory, charcoal, blood red
 // Light mode inverts the surface hierarchy, keeps the blood accent
 
@@ -77,9 +77,25 @@ export function severityBg(s) {
   return "#4A7C4A10";
 }
 export function severityLabel(s) {
-  if (s === "HIGH")   return "🔴 HIGH";
-  if (s === "MEDIUM") return "🟡 MEDIUM";
-  return "🟢 LOW";
+  let color = "#22c55e"; 
+  let label = "LOW";
+
+  if (s === "HIGH") {
+    color = "#ef4444"; 
+    label = "HIGH";
+  } else if (s === "MEDIUM") {
+    color = "#eab308"; 
+    label = "MEDIUM";
+  }
+
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+      <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="6" cy="6" r="6" fill={color} />
+      </svg>
+      {label}
+    </span>
+  );
 }
 
 export const GLOBAL_CSS = `
