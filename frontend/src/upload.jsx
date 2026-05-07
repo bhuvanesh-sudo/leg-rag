@@ -24,7 +24,7 @@ async function ingestFile(file, onSuccess, setStatus) {
   }
 }
 
-// ── Large landing drop zone ──────────────────────────────────────────────────
+//  Large landing drop zone 
 export function UploadZone({ onIngested, T }) {
   const [dragging, setDragging] = useState(false);
   const [status, setStatus] = useState(null);
@@ -126,7 +126,7 @@ export function UploadZone({ onIngested, T }) {
   );
 }
 
-// ── Compact sidebar uploader ─────────────────────────────────────────────────
+//  Compact sidebar uploader 
 export function SmallUpload({ onIngested, label, T }) {
   const [status, setStatus] = useState(null);
   const inputRef = useRef();

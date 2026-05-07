@@ -39,12 +39,12 @@ export default function App() {
         transition: "background 0.35s cubic-bezier(0.22,1,0.36,1), color 0.35s cubic-bezier(0.22,1,0.36,1)",
       }}>
 
-        {/* ── Header ── */}
+        {/*  Header  */}
         <Header dark={dark} setDark={setDark} doc={doc} T={T} />
 
         <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
 
-          {/* ── Sidebar ── */}
+          {/*  Sidebar  */}
           <Sidebar
             doc={doc}
             mode={mode}
@@ -53,7 +53,7 @@ export default function App() {
             T={T}
           />
 
-          {/* ── Main ── */}
+          {/*  Main  */}
           <main style={{
             flex: 1,
             display: "flex",
@@ -86,7 +86,7 @@ export default function App() {
   );
 }
 
-// ── Header ───────────────────────────────────────────────────────────────────
+//  Header 
 function Header({ dark, setDark, doc, T }) {
   return (
     <header style={{
@@ -187,7 +187,7 @@ function Header({ dark, setDark, doc, T }) {
   );
 }
 
-// ── Sidebar ───────────────────────────────────────────────────────────────────
+//  Sidebar 
 function Sidebar({ doc, mode, setMode, onIngested, T }) {
   return (
     <aside style={{
@@ -240,7 +240,7 @@ function Sidebar({ doc, mode, setMode, onIngested, T }) {
   );
 }
 
-// ── Landing ───────────────────────────────────────────────────────────────────
+//  Landing 
 function Landing({ onIngested, T }) {
   return (
     <div style={{
@@ -324,7 +324,7 @@ function Landing({ onIngested, T }) {
   );
 }
 
-// ── Small helper ─────────────────────────────────────────────────────────────
+//  Small helper 
 function SidebarLabel({ children, T }) {
   return (
     <div style={{
@@ -341,7 +341,7 @@ function SidebarLabel({ children, T }) {
   );
 }
 
-// ── Error Boundary ────────────────────────────────────────────────────────────
+//  Error Boundary 
 // Catches render errors so a bad API response never blanks the whole screen
 class ErrorBoundary extends Component {
   constructor(props) {

@@ -64,7 +64,7 @@ export function Avatar({ letter, T }) {
   );
 }
 
-// ── SourcePill — expandable citation inside a chat bubble ────────────────────
+//  SourcePill — expandable citation inside a chat bubble 
 function SourcePill({ source, T, index }) {
   const [open, setOpen] = useState(false);
   return (
@@ -138,7 +138,7 @@ function SourcePill({ source, T, index }) {
   );
 }
 
-// ── Bubble — a single chat message ───────────────────────────────────────────
+//  Bubble — a single chat message 
 export function Bubble({ msg, T }) {
   const isUser = msg.role === "user";
   const sources = Array.isArray(msg.sources) ? msg.sources : [];
@@ -181,7 +181,7 @@ export function Bubble({ msg, T }) {
   );
 }
 
-// ── PanelHeader ───────────────────────────────────────────────────────────────
+//  PanelHeader 
 export function PanelHeader({ title, subtitle, action, T }) {
   return (
     <div style={{ marginBottom: 24 }}>
@@ -247,7 +247,7 @@ export function PanelHeader({ title, subtitle, action, T }) {
   );
 }
 
-// ── EmptyState ────────────────────────────────────────────────────────────────
+//  EmptyState 
 export function EmptyState({ icon, title, body, T }) {
   return (
     <div className="fade-in" style={{

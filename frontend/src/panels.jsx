@@ -15,7 +15,7 @@ const SUGGESTIONS = [
   "Summarize the payment terms.",
 ];
 
-// ── Chat ─────────────────────────────────────────────────────────────────────
+//  Chat 
 export function ChatPanel({ doc, sessionId, T }) {
   const [messages, setMessages] = useState([{
     role: "assistant",
@@ -150,7 +150,7 @@ export function ChatPanel({ doc, sessionId, T }) {
   );
 }
 
-// ── Risk Scan ─────────────────────────────────────────────────────────────────
+//  Risk Scan 
 export function RiskPanel({ doc, T }) {
   const [loading, setLoading] = useState(false);
   const [risks, setRisks] = useState(null);
@@ -258,7 +258,7 @@ export function RiskPanel({ doc, T }) {
   );
 }
 
-// ── Worry List ─────────────────────────────────────────────────────────────────
+//  Worry List 
 export function WorryPanel({ doc, T }) {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
@@ -332,7 +332,7 @@ export function WorryPanel({ doc, T }) {
   );
 }
 
-// ── Compare ───────────────────────────────────────────────────────────────────
+//  Compare 
 export function ComparePanel({ doc, T }) {
   const [docB, setDocB] = useState(null);
   const [loading, setLoading] = useState(false);
